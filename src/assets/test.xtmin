@@ -1,0 +1,11 @@
+div #hello
+    div .login-wrap
+    div #world .ms-login
+        div .ms-title '登录「 阳关三叠 」'
+        el-form .ms-content :model=form :rules=rules ref=form :label-width='60px' label-position=left hide-required-asterisk=true
+            el-form-item prop=username label=用户名
+                el-input v-model=form.username
+            el-form-item prop=password label='密  码'
+                el-input type=password v-model=form.password
+            div .login-btn
+                el-button type=primary @click=submitForm '登 录'
