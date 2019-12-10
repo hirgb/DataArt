@@ -11,7 +11,7 @@ module.exports = class extends Controller {
     }
 
     async test() {
-        // const pe = await this.ctx.service.sse.pe.update()
+        const pe = await this.ctx.service.sse.tradeSummary.updateMonth()
         this.ctx.body = pe;
     }
 }

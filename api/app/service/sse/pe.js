@@ -6,10 +6,7 @@ module.exports = class extends Service {
         const config = ctx.app.config
         const pe = await ctx.curl(config.dataUrl.sse.peIndustry, {
             dataType: 'json',
-            headers: {
-                referer: config.dataUrl.sse.referer,
-                "user-agent": config.dataUrl.global.agent
-            }
+            headers: config.dataUrl.sse.headers
         })
         return pe
     }
@@ -20,10 +17,7 @@ module.exports = class extends Service {
         try {
             const res = await ctx.curl(config.dataUrl.sse.peIndustry, {
                 dataType: 'json',
-                headers: {
-                    referer: config.dataUrl.sse.referer,
-                    "user-agent": config.dataUrl.global.agent
-                }
+                headers: config.dataUrl.sse.headers
             })
             if (res.status === 200) {
                 const result = res.data.result
