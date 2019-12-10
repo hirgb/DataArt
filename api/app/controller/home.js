@@ -10,15 +10,8 @@ module.exports = class extends Controller {
         ctx.body = 'This is a market view project.';
     }
 
-    async hack() {
-        const ctx = this.ctx
-        const puppeteer = require('puppeteer');
-
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto('https://new.qq.com/omn/20191207/20191207A01GUJ00');
-        const c = await page.content();
-        await browser.close();
-        ctx.body = c;
+    async test() {
+        // const pe = await this.ctx.service.sse.pe.update()
+        this.ctx.body = pe;
     }
 }

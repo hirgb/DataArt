@@ -9,7 +9,7 @@ module.exports = app => {
         controller
     } = app;
     router.get('/', controller.home.index);
-    router.get('/hack', controller.home.hack);
+    router.get('/test', controller.home.test);
 
     router.resources('users', '/users', controller.users);
     router.resources('pe', '/data/pe', controller.data.pe);
