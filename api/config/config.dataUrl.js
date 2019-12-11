@@ -11,7 +11,8 @@ module.exports = {
             "user-agent": agent
         },
         peIndustry: 'https://query.sse.com.cn/commonQuery.do?sqlId=COMMON_SYL_BKPE_LIST_L',
-        yearTradeSummary: 'query.sse.com.cn/marketdata/tradedata/queryNewYearlyTrade.do',
-        monthTradeSummary: 'query.sse.com.cn/marketdata/tradedata/queryMonthlyTradeNew.do',
+        yearTradeSummary: 'https://query.sse.com.cn/marketdata/tradedata/queryNewYearlyTrade.do',
+        monthTradeSummary: 'https://query.sse.com.cn/marketdata/tradedata/queryMonthlyTradeNew.do',
+        allStocks: 'http://query.sse.com.cn/index/consList.do?indexCode=000001',
     }
 }
